@@ -94,6 +94,7 @@
 
     a {
       color: var(--accent);
+      overflow-wrap: anywhere;
     }
 
     ul {
@@ -158,17 +159,14 @@
     <header>
       <p class="eyebrow">WAPDA Bill</p>
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective date: September 14, 2026 &middot; Last updated: September 14, 2026</p>
+      <p class="meta">Effective date: September 14, 2026 &middot; Last updated: September 15, 2026</p>
     </header>
 
     <h2>1. Introduction</h2>
     <p>This Privacy Policy explains how <strong>Muhammad Noman</strong> ("I", "we", "us" or "our") handles information
-      in the
-      <strong>WAPDA Bill</strong> mobile app (package name <code>pk.nomanapps.wapdabill</code>) for Android and iOS (the
-      "App").
-      The App lets you save your electricity connections and check bills from Pakistani electricity distribution
-      companies (DISCOs).
-    </p>
+      in the <strong>WAPDA Bill</strong> mobile app (package name <code>pk.nomanapps.wapdabill</code>) for Android and
+      iOS (the "App"). The App lets you save your electricity connections, check bills from Pakistani electricity
+      distribution companies (DISCOs), and get optional reminders about your bills.</p>
     <p>By using the App, you agree to the practices described in this policy.</p>
 
     <div class="note">
@@ -176,8 +174,10 @@
       <ul>
         <li>There is no sign-up, no account and no server of our own. We do not collect your name, email, phone number
           or location.</li>
-        <li>Your saved connections and bills are stored <strong>only on your device</strong>.</li>
+        <li>Your saved connections, bills and alert settings are stored <strong>only on your device</strong>.</li>
         <li>Bill lookups go <strong>directly from your device</strong> to the official PITC bill portal.</li>
+        <li>Bill alerts are <strong>local notifications</strong> created on your device. They are off until you turn
+          them on, and the App asks for notification permission only then.</li>
         <li>Bill scanning with the camera happens <strong>on your device</strong>; images are not uploaded by us.</li>
         <li>The App shows ads through <strong>Google AdMob</strong>, which collects some device data as described below.
         </li>
@@ -185,39 +185,87 @@
     </div>
 
     <h2>2. Disclaimer and data source</h2>
-    <p>The App is an independent app. It is <strong>not affiliated with, endorsed by, or connected to</strong> WAPDA,
-      PITC,
-      any electricity distribution company (such as MEPCO, LESCO, FESCO, GEPCO, IESCO, PESCO, HESCO, SEPCO, QESCO or
-      TESCO),
-      or any government organization.</p>
-    <p>Bill information shown in the App comes from the publicly available official bill portal:
-      <a href="https://bill.pitc.com.pk" rel="noopener">https://bill.pitc.com.pk</a>.
-      We do not own or control that information and cannot guarantee that it is accurate or up to date. Always confirm
-      important details with your electricity company.
-    </p>
+    <p>The App is an independent app and <strong>is not a government app</strong>. It is <strong>not affiliated with,
+        endorsed by, or connected to</strong> WAPDA, PITC (Power Information Technology Company), the Government of
+      Pakistan, any electricity distribution company (such as LESCO, MEPCO, FESCO, IESCO, GEPCO, PESCO, HESCO or QESCO),
+      or any other government organization.</p>
+    <p>Bill information shown in the App comes from the publicly available official bill portal of PITC:
+      <a href="https://bill.pitc.com.pk" rel="noopener">https://bill.pitc.com.pk</a>. The official bill page for each
+      supported company is:</p>
+    <ul>
+      <li>LESCO: <a href="https://bill.pitc.com.pk/lescobill" rel="noopener">https://bill.pitc.com.pk/lescobill</a></li>
+      <li>MEPCO: <a href="https://bill.pitc.com.pk/mepcobill" rel="noopener">https://bill.pitc.com.pk/mepcobill</a></li>
+      <li>FESCO: <a href="https://bill.pitc.com.pk/fescobill" rel="noopener">https://bill.pitc.com.pk/fescobill</a></li>
+      <li>IESCO: <a href="https://bill.pitc.com.pk/iescobill" rel="noopener">https://bill.pitc.com.pk/iescobill</a></li>
+      <li>GEPCO: <a href="https://bill.pitc.com.pk/gepcobill" rel="noopener">https://bill.pitc.com.pk/gepcobill</a></li>
+      <li>PESCO: <a href="https://bill.pitc.com.pk/pescobill" rel="noopener">https://bill.pitc.com.pk/pescobill</a></li>
+      <li>HESCO: <a href="https://bill.pitc.com.pk/hescobill" rel="noopener">https://bill.pitc.com.pk/hescobill</a></li>
+      <li>QESCO: <a href="https://bill.pitc.com.pk/qescobill" rel="noopener">https://bill.pitc.com.pk/qescobill</a></li>
+    </ul>
+    <p>We do not own or control that information and cannot guarantee that it is accurate or up to date. Always confirm
+      important details with your electricity company. The App also shows these links, and tapping one opens the page in
+      your browser, where that website's own policies apply.</p>
 
     <h2>3. Information stored on your device</h2>
     <p>When you add a connection, the App saves the following in a private database on your device:</p>
     <ul>
       <li>The reference number and electricity company you enter;</li>
-      <li>Any name or label you give the connection;</li>
+      <li>Any name and category (for example Home, Shop or Solar) you give the connection;</li>
       <li>Bill details fetched from the bill portal (for example the consumer name and address printed on the bill,
-        billing month, units, amount due, due date and payment status).</li>
+        billing month, units, amount due, due date and payment status), and whether you marked a bill as paid;</li>
+      <li>Your alert settings for the connection: whether a due-date reminder is on and how many days before the due date,
+        and whether new-bill alerts are on.</li>
     </ul>
-    <p>This data never leaves your device except for the bill lookup described in Section 4 and when you choose to share
-      a bill
-      (Section 6). We have no access to it and do not store it on any server.</p>
+    <p>This data never leaves your device except for the bill lookups described in Sections 4 and 5 and when you choose
+      to share a bill (Section 7). We have no access to it and do not store it on any server.</p>
 
     <h2>4. Checking bills</h2>
     <p>When you add or refresh a connection, the App sends your reference number from your device directly to
-      <a href="https://bill.pitc.com.pk" rel="noopener">bill.pitc.com.pk</a> over a secure (HTTPS) connection to
-      retrieve your bill,
-      and loads company logos from the same website. As with any website, that portal receives your IP address and basic
-      request
-      information. Its handling of that information is governed by its own policies, not this one.
-    </p>
+      <a href="https://bill.pitc.com.pk" rel="noopener">bill.pitc.com.pk</a> over a secure (HTTPS) connection to retrieve
+      your bill, and loads company logos from the same website. As with any website, that portal receives your IP address
+      and basic request information. Its handling of that information is governed by its own policies, not this one.</p>
 
-    <h2>5. Camera and photos</h2>
+    <h2>5. Bill alerts and notifications</h2>
+    <p>The App offers two optional alerts for each saved connection. Both are <strong>off by default</strong>:</p>
+    <ul>
+      <li><strong>Due-date reminder</strong> &ndash; a notification a few days (1, 2, 3, 5 or 7, as you choose) before an
+        unpaid bill is due. The reminder is scheduled on your device using the due date of the bill already saved there.
+        It is cancelled when the bill is paid, when you turn the reminder off, or when you delete the connection.</li>
+      <li><strong>New-bill alert (Android only)</strong> &ndash; a notification when next month's bill becomes available.
+        To find it, the App runs a background check using Android's WorkManager, only while at least one connection has
+        this alert on and your device has an internet connection. For those connections, it looks up the bill on
+        <a href="https://bill.pitc.com.pk" rel="noopener">bill.pitc.com.pk</a> in the same way as Section 4, at most
+        about once a day and only around the time the next bill is expected.</li>
+    </ul>
+    <p>These are <strong>local notifications</strong>: they are created and shown by the App on your device. We do not
+      use a push-notification service or any server of our own, and no notification content or alert setting is sent to
+      us or to anyone else.</p>
+    <p>Permissions used for alerts:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>Why the App uses it</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Notifications (<code>POST_NOTIFICATIONS</code> on Android 13+, notification permission on iOS)</td>
+            <td>To show due-date reminders and new-bill alerts. The App asks for it only when you first turn an alert on;
+              older Android versions allow notifications by default.</td>
+          </tr>
+          <tr>
+            <td>Run at startup (<code>RECEIVE_BOOT_COMPLETED</code>, Android)</td>
+            <td>To restore scheduled reminders after your device restarts.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>You can turn alerts off at any time from the App (the bell on each connection), or block the App's notifications in
+      your device settings. If notifications are blocked, the App will not show alerts.</p>
+
+    <h2>6. Camera and photos</h2>
     <p>The App can scan the reference number from a paper bill so you don't have to type it:</p>
     <ul>
       <li><strong>Camera</strong> &ndash; used only while you are on the scan screen to read the reference number.</li>
@@ -225,24 +273,20 @@
         image you pick is accessed.</li>
     </ul>
     <p>Text recognition is performed <strong>on your device</strong> using Google ML Kit. The App does not upload, save
-      or share these
-      images. Google ML Kit may send limited, non-identifying diagnostic and usage information to Google to operate and
-      improve the
-      service (see <a href="https://developers.google.com/ml-kit/terms" rel="noopener">ML Kit Terms</a>).</p>
+      or share these images. Google ML Kit may send limited, non-identifying diagnostic and usage information to Google to
+      operate and improve the service (see <a href="https://developers.google.com/ml-kit/terms" rel="noopener">ML Kit
+        Terms</a>).</p>
     <p>These permissions are optional. You can deny them and type the reference number instead, and you can revoke them
       at any time in your device settings.</p>
 
-    <h2>6. Sharing and printing bills</h2>
+    <h2>7. Sharing and printing bills</h2>
     <p>If you use the share or print option, the App creates an image or document of your bill on your device and hands
-      it to the
-      app or printer you select. What happens next is controlled by that app or service.</p>
+      it to the app or printer you select. What happens next is controlled by that app or service.</p>
 
-    <h2>7. Advertising (Google AdMob)</h2>
+    <h2>8. Advertising (Google AdMob)</h2>
     <p>The App is free and is supported by ads (banner ads, and optional rewarded ads you can choose to watch) provided
-      by
-      <strong>Google AdMob</strong>. To show, measure and limit ads and to prevent fraud, Google may automatically
-      collect:
-    </p>
+      by <strong>Google AdMob</strong>. To show, measure and limit ads and to prevent fraud, Google may automatically
+      collect:</p>
     <ul>
       <li>Device identifiers, such as the Android Advertising ID;</li>
       <li>IP address and approximate location derived from it;</li>
@@ -257,10 +301,8 @@
 
     <h3>Consent</h3>
     <p>Where required by law (for example in the European Economic Area, the United Kingdom and Switzerland), the App
-      uses
-      Google's consent tool to ask for your consent before personalized ads are shown. If you do not consent, you may
-      still see
-      non-personalized ads.</p>
+      uses Google's consent tool to ask for your consent before personalized ads are shown. If you do not consent, you may
+      still see non-personalized ads.</p>
 
     <h3>Your ad choices</h3>
     <ul>
@@ -269,62 +311,58 @@
         your device).
       </li>
       <li><strong>iOS:</strong> the App does not ask for App Tracking Transparency permission and does not use your IDFA
-        to track you
-        across other companies' apps and websites.</li>
+        to track you across other companies' apps and websites.</li>
       <li>You can also manage Google ad personalization at <a href="https://myadcenter.google.com" rel="noopener">My Ad
           Center</a>.</li>
     </ul>
 
-    <h2>8. Information we do not collect</h2>
+    <h2>9. Information we do not collect</h2>
     <ul>
       <li>No account, login, name, email address or phone number;</li>
-      <li>No precise location (the App does not request location permission);</li>
+      <li>No precise location (the App does not request location permission), including in the background;</li>
       <li>No contacts, messages, call logs or files other than a photo you explicitly pick;</li>
+      <li>No notification content or alert settings: alerts stay on your device;</li>
       <li>No analytics or tracking SDKs of our own, and we do not sell your information.</li>
     </ul>
 
-    <h2>9. Data retention and deletion</h2>
+    <h2>10. Data retention and deletion</h2>
     <p>Because your data is stored only on your device, you are in full control of it:</p>
     <ul>
-      <li>Delete a connection or bill from within the App at any time;</li>
-      <li>Remove all App data by clearing the App's storage in your device settings or by uninstalling the App.</li>
+      <li>Delete a connection or bill from within the App at any time. Deleting a connection also cancels its
+        reminders and alerts;</li>
+      <li>Turn off a connection's alerts at any time from the bell on that connection;</li>
+      <li>Remove all App data, including scheduled reminders, by clearing the App's storage in your device settings or by
+        uninstalling the App.</li>
     </ul>
     <p>We keep no copy on any server, so there is nothing further for us to delete. For data collected by Google through
-      ads,
-      please use the Google controls linked in Section 7.</p>
+      ads, please use the Google controls linked in Section 8.</p>
 
-    <h2>10. Security</h2>
+    <h2>11. Security</h2>
     <p>App data is kept in the App's private storage, which other apps cannot access, and bill requests are sent over
-      HTTPS.
-      No method of electronic storage or transmission is completely secure, so please protect your device with a screen
-      lock.</p>
+      HTTPS. No method of electronic storage or transmission is completely secure, so please protect your device with a
+      screen lock.</p>
 
-    <h2>11. Children's privacy</h2>
+    <h2>12. Children's privacy</h2>
     <p>The App is intended for a general audience managing household electricity bills and is not directed to children
-      under 13.
-      We do not knowingly collect personal information from children. If you believe a child has provided information
-      through the App,
-      please contact us.</p>
+      under 13. We do not knowingly collect personal information from children. If you believe a child has provided
+      information through the App, please contact us.</p>
 
-    <h2>12. Your rights</h2>
+    <h2>13. Your rights</h2>
     <p>Depending on where you live, you may have rights to access, correct or delete your personal information, or to
-      withdraw
-      consent. Since we do not hold your personal information, you can exercise most of these directly on your device as
-      described
-      above. For any other request or question, contact us using the details below.</p>
+      withdraw consent. Since we do not hold your personal information, you can exercise most of these directly on your
+      device as described above. For any other request or question, contact us using the details below.</p>
 
-    <h2>13. Changes to this policy</h2>
+    <h2>14. Changes to this policy</h2>
     <p>We may update this Privacy Policy from time to time, for example when the App gains new features. Changes will be
-      posted on
-      this page with a new "Last updated" date. Please review it periodically.</p>
+      posted on this page with a new "Last updated" date. Please review it periodically.</p>
 
-    <h2>14. Contact us</h2>
+    <h2>15. Contact us</h2>
     <p>If you have any questions or suggestions about this Privacy Policy, please contact:</p>
     <p><strong>Muhammad Noman</strong><br>
       Email: <a href="mailto:chnoman503@gmail.com">chnoman503@gmail.com</a></p>
 
-    <footer>&copy; 2026 Muhammad Noman. WAPDA Bill is an independent app and is not affiliated with WAPDA, PITC or any
-      DISCO.</footer>
+    <footer>&copy; 2026 Muhammad Noman. WAPDA Bill is an independent app and not a government app. It is not affiliated
+      with WAPDA, PITC, the Government of Pakistan or any DISCO.</footer>
   </main>
 </body>
 
